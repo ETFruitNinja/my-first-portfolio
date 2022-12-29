@@ -10,6 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    background-color: var(--cuttysark);
+    color: var(--montecarlo);
 }
 
 header {
@@ -17,12 +19,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1%;
-    background-color: var(--cuttysark);
-    color: var(--montecarlo)
   }
 
 h1 {
-    font-size: 200%;
+    font-size: 225%;
+    padding: 15px;
 }
 
 nav ul {
@@ -35,45 +36,52 @@ nav a {
     color: var(--montecarlo);
     font-weight: bold;
     text-decoration: none;
+    padding: 5px;
+    border-bottom: 2px solid var(--montecarlo);
+    margin: 15px;
+}
+
+nav a:hover {
+    background-color: var(--montecarlo);
+    color: var(--cuttysark);
+    border-bottom-color: solid var(--cuttysark);
 }
 
 .main-photo {
     height: 500px;
     width: 100%;
-    margin-bottom: 25px;
     background-image: url("./images/wombat.jpg");
     background-size: cover;
     background-position: center;
 }
 
-main {
-    display: flex;
-    flex: 1 1 0;
-    max-width: 96%;
-    margin: 2% auto;
-}
-
+/* TODO: titles should be to the right with some padding and have a margin to divide the sections */
 section {
-    /* border-bottom: 1px solid var(--cuttysark); */
-    width: 80%;
-}
-
-section h2 {
     display: flex;
-    justify-content: flex-start;
-    /* align-self: center; */
-    font-size: 150%;
-    /* padding: 20px;
-    border: 4px solid #b9c6ae; */
-    border-right: 1px solid var(--cuttysark);
+    /* text-align: center; */
+    /* flex-grow: wrap; */
+    margin: 20px;
 }
 
-section p {
-    margin-left: 3%;
-    flex: 0 0 60%;
-    /* margin: 2% 0;
-    font-size: 110%; */
-  }
+h2 {
+    font-size: 150%;
+    width: 20%;
+    text-align: right;
+    padding: 15px;
+    border-right: 2px solid var(--montecarlo);
+    /* flex: 1 1 25%; */
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 75%;
+    padding: 15px;
+}
+
+p {
+    text-align: left;
+}
 
 @media screen and (max-width: 768px) {
     header {
@@ -82,5 +90,17 @@ section p {
   
     main {
       max-width: 1200px;
+    }
+
+    section {
+        flex-direction: column;
+        /* TODO: titles for each section should be centered and underlined in this format */
+    }
+
+    h2 {
+        text-align: left;
+        width: 100%;
+        border-right: 0px;
+        border-bottom: 2px solid var(--montecarlo);
     }
 }
