@@ -4,6 +4,7 @@
     --japonica: #d5715f;
     --montecarlo: #8CCEC4;
     --neptune: #85B7C0;
+    --whitish: #f9f3de;
 }
 
 body {
@@ -55,11 +56,20 @@ nav a:hover {
     background-position: center;
 }
 
+.main-photo h4 {
+    background-color: var(--japonica);
+    color: var(--whitish);
+    width: 240px;
+    padding: 5px;
+    position: relative;
+    float: right;
+    top: 440px;
+    right: 10px;
+}
+
 /* TODO: titles should be to the right with some padding and have a margin to divide the sections */
 section {
     display: flex;
-    /* text-align: center; */
-    /* flex-grow: wrap; */
     margin: 20px;
 }
 
@@ -83,9 +93,98 @@ p {
     text-align: left;
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grid-item {
+    flex-grow: 1;
+    flex-basis: 48%;
+    border: 4px solid var(--japonica);
+    margin: 5px 5px 5px 5px;
+    height: 150px;
+}
+
+/* TODO: add links in CSS file to websites, maybe add cool animation */
+#item-1 {
+    flex-basis: 100%;
+    height: 300px;
+    background-image: url("./images/prework-study-guide.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#item-2 {
+    background-image: url("./images/horiseon.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#item-3 {
+    background-image: url("./images/wombat.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#item-4 {
+    background-image: url("./images/coming-soon.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#item-5 {
+    background-image: url("./images/coming-soon.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.work-caption {
+    background-color: var(--japonica);
+    width: 240px;
+    padding: 5px;
+    position: relative;
+    top: 90px;
+}
+
+.work-caption h3 {
+    font-size: 120%;
+}
+
+.work-caption:hover {
+    background-color: maroon;
+}
+
+#item-1 .work-caption {
+    top: 240px;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: var(--whitish);
+}
+
+figcaption a:visited {
+    text-decoration: none;
+    color: var(--whitish);
+}
+
+#contact-info article a {
+    color: var(--montecarlo);
+}
+
+#contact-info article a:visited {
+    color: var(--montecarlo);
+}
+
 @media screen and (max-width: 768px) {
     header {
       flex-direction: column;
+    }
+
+    nav a {
+        border-bottom: 2px solid var(--cuttysark);
     }
   
     main {
@@ -94,7 +193,6 @@ p {
 
     section {
         flex-direction: column;
-        /* TODO: titles for each section should be centered and underlined in this format */
     }
 
     h2 {
@@ -102,5 +200,17 @@ p {
         width: 100%;
         border-right: 0px;
         border-bottom: 2px solid var(--montecarlo);
+    }
+
+    .grid-item {
+        flex-basis: 100%;
+    }
+
+    #item-1 {
+        height: 150px;
+    }
+
+    #item-1 .work-caption {
+        top: 90px;
     }
 }
